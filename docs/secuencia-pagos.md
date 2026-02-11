@@ -1,8 +1,6 @@
-```markdown
 # Secuencia de Transacción de Pagos
 
 Interacción entre el Frontend (App Web), el Backend y la Pasarela de Pagos externa.
-```
 
 ```mermaid
 sequenceDiagram
