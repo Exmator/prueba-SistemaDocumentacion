@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#especificaciones-tecnicas-del-modulo-de-inventario" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -284,6 +289,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificación Técnica
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -301,6 +326,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-vision-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Visión General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnologías
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-de-datos-producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura de Datos: Producto
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -323,6 +400,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-vision-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Visión General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tecnologías
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-de-datos-producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura de Datos: Producto
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -339,29 +459,50 @@
 
 
 
-  <h1>Especificación Técnica</h1>
-
-<div class="highlight"><pre><span></span><code><span class="gh"># Especificaciones Técnicas del Módulo de Inventario</span>
-
-<span class="gu">## 1. Visión General</span>
-El módulo de inventario se encarga de la sincronización en tiempo real entre las tiendas físicas y el e-commerce.
-
-<span class="gu">## 2. Tecnologías</span>
-<span class="k">*</span><span class="w"> </span><span class="gs">**Lenguaje:**</span> Python 3.10
-<span class="k">*</span><span class="w"> </span><span class="gs">**Base de Datos:**</span> PostgreSQL 14
-<span class="k">*</span><span class="w"> </span><span class="gs">**Cache:**</span> Redis
-
-<span class="gu">## 3. Estructura de Datos: Producto</span>
-
-| Campo | Tipo | Descripción |
-| :--- | :--- | :--- |
-| <span class="sb">`sku`</span> | String (PK) | Identificador único (e.g., &quot;TSHIRT-BLK-L&quot;) |
-| <span class="sb">`qty_available`</span> | Integer | Cantidad física disponible para venta |
-| <span class="sb">`reserved`</span> | Integer | Cantidad en carritos de compra activos |
-| <span class="sb">`last_update`</span> | Timestamp | Última sincronización con ERP |
-
-<span class="k">&gt; </span><span class="ge">**Nota:** La cantidad `reserved` se libera automáticamente después de 15 minutos de inactividad.</span>
-</code></pre></div>
+<h1 id="especificaciones-tecnicas-del-modulo-de-inventario">Especificaciones Técnicas del Módulo de Inventario</h1>
+<h2 id="1-vision-general">1. Visión General</h2>
+<p>El módulo de inventario se encarga de la sincronización en tiempo real entre las tiendas físicas y el e-commerce.</p>
+<h2 id="2-tecnologias">2. Tecnologías</h2>
+<ul>
+<li><strong>Lenguaje:</strong> Python 3.10</li>
+<li><strong>Base de Datos:</strong> PostgreSQL 14</li>
+<li><strong>Cache:</strong> Redis</li>
+</ul>
+<h2 id="3-estructura-de-datos-producto">3. Estructura de Datos: Producto</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>sku</code></td>
+<td style="text-align: left;">String (PK)</td>
+<td style="text-align: left;">Identificador único (e.g., "TSHIRT-BLK-L")</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>qty_available</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">Cantidad física disponible para venta</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reserved</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">Cantidad en carritos de compra activos</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>last_update</code></td>
+<td style="text-align: left;">Timestamp</td>
+<td style="text-align: left;">Última sincronización con ERP</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> La cantidad <code>reserved</code> se libera automáticamente después de 15 minutos de inactividad.</p>
+</blockquote>
 
 
 
