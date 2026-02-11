@@ -346,16 +346,15 @@
 <div class="highlight"><pre><span></span><code><span class="gh"># Secuencia de Transacción de Pagos</span>
 
 Interacción entre el Frontend (App Web), el Backend y la Pasarela de Pagos externa.
-
-```mermaid
-sequenceDiagram
+</code></pre></div>
+<pre class="mermaid"><code>sequenceDiagram
     autonumber
     actor Cliente
     participant App as App Web
     participant API as Backend API
     participant Banco as Pasarela Stripe
 
-    Cliente-&gt;&gt;App: Clic en &quot;Pagar Ahora&quot;
+    Cliente-&gt;&gt;App: Clic en "Pagar Ahora"
     App-&gt;&gt;API: POST /api/v1/checkout
     activate API
     API-&gt;&gt;Banco: Validar Tarjeta (Token)
@@ -365,8 +364,7 @@ sequenceDiagram
     API-&gt;&gt;API: Registrar Transacción en BD
     API--&gt;&gt;App: Confirmación de Pedido
     deactivate API
-    App--&gt;&gt;Cliente: Mostrar &quot;Pago Exitoso&quot;
-</code></pre></div>
+    App--&gt;&gt;Cliente: Mostrar "Pago Exitoso"</code></pre>
 
 
 
