@@ -352,8 +352,7 @@
 
 <h1 id="proceso-de-aprobacion-de-pedidos">Proceso de Aprobación de Pedidos</h1>
 <p>Este diagrama describe el flujo operativo desde que el cliente realiza un pedido hasta que sale de bodega.</p>
-<p>```mermaid
-graph TD
+<pre class="mermaid"><code>graph TD
     A[Cliente realiza Pedido] --&gt; B{¿Stock Disponible?}
     B -- No --&gt; C[Notificar al Cliente]
     C --&gt; D[Cancelar Pedido]
@@ -363,10 +362,10 @@ graph TD
     G --&gt; C
     F -- Sí --&gt; H[Generar Factura]
     H --&gt; I[Enviar a Bodega]
-    I --&gt; J((Fin del Proceso))</p>
-<pre><code>style A fill:#f9f,stroke:#333,stroke-width:2px
-style J fill:#bbf,stroke:#333,stroke-width:2px
-</code></pre>
+    I --&gt; J((Fin del Proceso))
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style J fill:#bbf,stroke:#333,stroke-width:2px</code></pre>
 
 
 

@@ -71,11 +71,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#secuencia-de-transaccion-de-pagos" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -264,8 +259,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -332,8 +325,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -350,28 +341,32 @@
 
 
 
-<p>```markdown</p>
-<h1 id="secuencia-de-transaccion-de-pagos">Secuencia de Transacción de Pagos</h1>
-<p>Interacción entre el Frontend (App Web), el Backend y la Pasarela de Pagos externa.</p>
-<p>```mermaid
+  <h1>API de Pagos (Secuencia)</h1>
+
+<div class="highlight"><pre><span></span><code><span class="gh"># Secuencia de Transacción de Pagos</span>
+
+Interacción entre el Frontend (App Web), el Backend y la Pasarela de Pagos externa.
+
+```mermaid
 sequenceDiagram
     autonumber
     actor Cliente
     participant App as App Web
     participant API as Backend API
-    participant Banco as Pasarela Stripe</p>
-<pre><code>Cliente-&gt;&gt;App: Clic en "Pagar Ahora"
-App-&gt;&gt;API: POST /api/v1/checkout
-activate API
-API-&gt;&gt;Banco: Validar Tarjeta (Token)
-activate Banco
-Banco--&gt;&gt;API: Respuesta: OK (200)
-deactivate Banco
-API-&gt;&gt;API: Registrar Transacción en BD
-API--&gt;&gt;App: Confirmación de Pedido
-deactivate API
-App--&gt;&gt;Cliente: Mostrar "Pago Exitoso"
-</code></pre>
+    participant Banco as Pasarela Stripe
+
+    Cliente-&gt;&gt;App: Clic en &quot;Pagar Ahora&quot;
+    App-&gt;&gt;API: POST /api/v1/checkout
+    activate API
+    API-&gt;&gt;Banco: Validar Tarjeta (Token)
+    activate Banco
+    Banco--&gt;&gt;API: Respuesta: OK (200)
+    deactivate Banco
+    API-&gt;&gt;API: Registrar Transacción en BD
+    API--&gt;&gt;App: Confirmación de Pedido
+    deactivate API
+    App--&gt;&gt;Cliente: Mostrar &quot;Pago Exitoso&quot;
+</code></pre></div>
 
 
 
