@@ -22,3 +22,4 @@ sequenceDiagram
     API-->>App: Confirmación de Pedido
     deactivate API
     App-->>Cliente: Mostrar "Pago Exitoso"
+```
