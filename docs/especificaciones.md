@@ -19,3 +19,4 @@ El módulo de inventario se encarga de la sincronización en tiempo real entre l
 | `last_update` | Timestamp | Última sincronización con ERP |
 
 > **Nota:** La cantidad `reserved` se libera automáticamente después de 15 minutos de inactividad.
+```
