@@ -1,12 +1,16 @@
 site_name: Sistema de Gestión de Pedidos
 theme:
   name: material
+  features:
+    - navigation.sections  # Agrupa visualmente por secciones
+    - navigation.indexes   # Permite que la carpeta misma sea un link (Landing)
   palette: 
     primary: indigo
     scheme: default
 
 # Configuración vital para Mermaid
 markdown_extensions:
+  - attr_list              # Necesario para redimensionar imágenes
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -15,6 +19,13 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
-  - Flujo de Aprobación (Proceso): proceso-aprobacion.md
-  - API de Pagos (Secuencia): secuencia-pagos.md
-  - Especificación Técnica: especificaciones.md
+  - 🎨 Área de Diagramas:
+      - Resumen Visual: diagramas/index.md
+      - Arquitectura C4: diagramas/arquitectura.md
+      - API de Pagos (Secuencia): diagramas/secuencia-pagos.md
+  - 📄 Centro de Documentos:
+      - Vista General: documentos/index.md
+      - Guía con Imágenes: documentos/guia_usuario.md
+      - Archivos PDF: documentos/manual_legal.md
+      - Flujo de Aprobación (Proceso): documentos/proceso-aprobacion.md
+      - Especificación Técnica: documentos/especificaciones.md

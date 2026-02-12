@@ -1,17 +1,32 @@
-# Welcome to MkDocs
+# Sistema de Documentación - Gestión de Pedidos
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Bienvenido a la documentación del **Sistema de Gestión de Pedidos**. Este sitio contiene toda la información necesaria para comprender, utilizar y mantener el sistema de gestión integral de pedidos.
 
-## Commands
+## Descripción General
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+El Sistema de Gestión de Pedidos es una solución empresarial completa diseñada para automatizar y optimizar el flujo de procesamiento de pedidos. El sistema abarca desde la recepción de solicitudes hasta su aprobación y procesamiento de pagos, proporcionando una plataforma robusta y confiable para la administración eficiente de operaciones comerciales.
 
-## Project layout
+## Estructura del Proyecto
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+La documentación se organiza en las siguientes secciones:
+
+### 📋 [Documentos](documentos/index.md)
+Accede a toda la documentación detallada del sistema:
+* Especificaciones técnicas y funcionales
+* Guía de usuario para realizar operaciones comunes
+* Manual legal y cumplimiento normativo
+* Proceso de aprobación de pedidos
+
+### 📊 [Diagramas](diagramas/index.md)
+Visualiza la arquitectura y flujos del sistema:
+* Arquitectura C4 del sistema
+* Secuencia de pagos y transacciones
+
+## Contenido Destacado
+
+Esta documentación proporciona:
+- **Guías operacionales**: Cómo utilizar el sistema de manera efectiva
+- **Especificaciones técnicas**: Detalles de implementación y arquitectura
+- **Diagramas visuales**: Representación clara de procesos y flujos
+- **Normativa legal**: Requisitos de cumplimiento y regulaciones
+- **Procesos críticos**: Detalles del ciclo de aprobación de pedidos
